@@ -39,7 +39,7 @@ class GCrawler implements GCrawlerInterface
      */
     protected $crawler;
 
-    public function __construct($config)
+    public function __construct($config = [])
     {
         $this->client = new Client($config);
         $this->config = $config;
@@ -63,8 +63,7 @@ class GCrawler implements GCrawlerInterface
     {
         $content = '';
 
-        if (filter_var($arg, FILTER_VALIDATE_URL))
-        {
+        if (filter_var($arg, FILTER_VALIDATE_URL)) {
             $response = $this->get($arg);
             $content = $response->getBody()->getContents();
         } else {
