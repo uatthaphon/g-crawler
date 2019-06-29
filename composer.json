@@ -1,0 +1,33 @@
+{
+    "name": "uatthaphon/g-crawler",
+    "description": "A simple php Web Scraper that wrap up Guzzle and DomCrawler",
+    "keywords": ["scrap", "dom-crawler", "guzzle"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Atthaphon Urairat",
+            "email": "u.atthaphon@gmail.com",
+            "homepage": "https://atthaphon.urairat.com/"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "symfony/dom-crawler": "^4.2",
+        "guzzlehttp/guzzle": "^6.3",
+        "symfony/css-selector": "^4.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "GCrawler\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "GCrawler\\Tests\\": "tests/"
+        }
+    }
+}
